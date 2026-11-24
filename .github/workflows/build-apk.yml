@@ -1,0 +1,71 @@
+name: Build Kath Hisab APK & AAB
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Installable APK & AAB
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Set up Gradle 9.3.1
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "9.3.1"
+
+      - name: Prepare debug keystore for signing
+        run: |
+          if [ -f debug.keystore ]; then
+            echo "Using existing debug.keystore"
+          elif [ -f debug.keystore.base64 ]; then
+            base64 -d debug.keystore.base64 > debug.keystore
+            echo "Decoded debug.keystore from debug.keystore.base64"
+          else
+            keytool -genkeypair -v \
+              -keystore debug.keystore \
+              -storepass android \
+              -alias androiddebugkey \
+              -keypass android \
+              -keyalg RSA \
+              -keysize 2048 \
+              -validity 10000 \
+              -dname "CN=Android Debug,O=Android,C=US"
+            echo "Generated fresh debug.keystore"
+          fi
+
+      - name: Accept Android SDK licenses
+        run: |
+          if [ -n "$ANDROID_HOME" ] && [ -x "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" ]; then
+            yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null 2>&1 || true
+          fi
+
+      - name: Run CFT unit tests
+        run: gradle :app:testDebugUnitTest --tests "com.example.TimberCalculatorEngineTest"
+
+      - name: Build installable APK & AAB
+        run: gradle :app:assembleDebug :app:bundleDebug
+
+      - name: Upload installable APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: kath-hisab-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+
+      - name: Upload AAB bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: kath-hisab-aab
+          path: app/build/outputs/bundle/debug/app-debug.aab
+          if-no-files-found: error

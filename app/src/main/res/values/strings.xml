@@ -1,0 +1,115 @@
+<resources>
+    <string name="app_name">কাঠ হিসাব</string>
+    <string name="app_subtitle">সিএফটি (CFT) ক্যালকুলেটর</string>
+
+    <!-- Navigation -->
+    <string name="nav_calculator">ক্যালকুলেটর</string>
+    <string name="nav_tally">তালিকা</string>
+    <string name="nav_guide">সূত্র</string>
+
+    <!-- Modes -->
+    <string name="mode_round_log">গোল গাছ</string>
+    <string name="mode_sawn_timber">কাটা কাঠ</string>
+
+    <!-- Inputs -->
+    <string name="label_length">দৈর্ঘ্য (লম্বা)</string>
+    <string name="label_girth">বেড় (গোলাই)</string>
+    <string name="label_width">প্রস্থ (চওড়া)</string>
+    <string name="label_thickness">পুরুত্ব (মোটা)</string>
+    <string name="label_quantity">সংখ্যা (পিস)</string>
+    <string name="label_rate">দর (প্রতি সিএফটি)</string>
+    <string name="label_wood_type">কাঠের ধরন (ঐচ্ছিক)</string>
+    <string name="label_rate_and_wood">দর ও কাঠের ধরন (ঐচ্ছিক)</string>
+    <string name="unit_feet">ফুট</string>
+    <string name="unit_inch">ইঞ্চি</string>
+    <string name="unit_cft">সিএফটি</string>
+    <string name="unit_cft_en">CFT</string>
+    <string name="unit_cbm">ঘনমিটার</string>
+    <string name="unit_taka">৳</string>
+    <string name="unit_piece">পিস</string>
+
+    <!-- Actions -->
+    <string name="action_add_to_tally">+ যোগ করে পরেরটি</string>
+    <string name="action_update_entry">হিসাব আপডেট করুন</string>
+    <string name="action_edit_item">আইটেম এডিট করুন</string>
+    <string name="action_reset">রিসেট</string>
+    <string name="action_clear_all">সব মুছুন</string>
+    <string name="action_share_tally">হিসাব শেয়ার</string>
+    <string name="action_copy_tally">কপি করুন</string>
+    <string name="action_toggle_digits">সংখ্যা ভাষা পরিবর্তন</string>
+    <string name="action_decrease_qty">সংখ্যা কমান</string>
+    <string name="action_increase_qty">সংখ্যা বাড়ান</string>
+    <string name="action_delete_item">আইটেম মুছুন</string>
+
+    <!-- Formula toggle -->
+    <string name="formula_hoppus">প্রচলিত (÷১৬)</string>
+    <string name="formula_cylinder">প্রকৃত ঘনফল (÷৪π)</string>
+    <string name="formula_hoppus_hint">স-মিল ও কাঠ বাজারে প্রচলিত হপাস সূত্র</string>
+    <string name="formula_cylinder_hint">গাণিতিক বেলনাকৃতি প্রকৃত আয়তন সূত্র</string>
+
+    <!-- Results -->
+    <string name="result_per_piece">প্রতি পিস</string>
+    <string name="result_total_cft">মোট সিএফটি</string>
+    <string name="result_combined_total">সর্বমোট (সব সাইজ মিলে)</string>
+    <string name="result_current_batch">বর্তমান সাইজ</string>
+    <string name="result_estimated_price">আনুমানিক দাম</string>
+    <string name="result_enter_measurements">ফুট ও ইঞ্চির মাপ ও সংখ্যা দিন — স্বয়ংক্রিয়ভাবে সিএফটি হিসাব হবে</string>
+    <string name="inline_chain_title">যোগ করা সাইজসমূহ (+)</string>
+    <string name="inline_chain_view_all">বিস্তারিত তালিকা</string>
+    <string name="editing_banner_label">আইটেম এডিট করা হচ্ছে</string>
+    <string name="tally_updated_message">হিসাব আপডেট করা হয়েছে</string>
+
+    <!-- Tally screen -->
+    <string name="tally_title">হিসাবের তালিকা</string>
+    <string name="tally_empty_title">কোনো হিসাব যোগ করা হয়নি</string>
+    <string name="tally_empty_subtitle">ক্যালকুলেটর থেকে একাধিক সাইজের গোল গাছ বা কাটা কাঠের মাপ ও সংখ্যা দিয়ে \"+ যোগ করে পরেরটি\" চাপুন।</string>
+    <string name="tally_go_calculator">ক্যালকুলেটরে যান</string>
+    <string name="tally_total_items">মোট পিস</string>
+    <string name="tally_round_count">গোল গাছ</string>
+    <string name="tally_sawn_count">কাটা কাঠ</string>
+    <string name="tally_copied_message">হিসাবের তালিকা কপি হয়েছে</string>
+    <string name="tally_added_message">হিসাবে যোগ হয়েছে — পরের সাইজ দিন</string>
+    <string name="tally_deleted_message">একটি হিসাব মুছে ফেলা হয়েছে</string>
+    <string name="action_undo">ফিরিয়ে আনুন</string>
+    <string name="action_cancel">বাতিল</string>
+    <string name="dialog_clear_all_title">সব হিসাব মুছে ফেলবেন?</string>
+    <string name="dialog_clear_all_message">তালিকার সব সংরক্ষিত কাঠের হিসাব স্থায়ীভাবে মুছে যাবে।</string>
+    <string name="tally_global_rate_hint">সব কাঠের গড় দর (৳/সিএফটি)</string>
+    <string name="tally_global_rate_short_hint">গড় দর (ঐচ্ছিক)</string>
+    <string name="tally_global_rate_price_label">গড় দরে মোট দাম</string>
+    <string name="tally_partial_price_label">দর দেওয়া %1$s/%2$s টির দাম</string>
+    <string name="tally_share_fallback_message">শেয়ার অ্যাপ পাওয়া যায়নি, হিসাব কপি করা হয়েছে</string>
+    <string name="dim_round_format">দৈর্ঘ্য %1$s × বেড় %2$s</string>
+    <string name="dim_sawn_format">দৈর্ঘ্য %1$s × প্রস্থ %2$s × পুরুত্ব %3$s</string>
+    <string name="badge_cylinder_formula">÷৪π</string>
+
+    <!-- Guide screen -->
+    <string name="guide_title">সিএফটি হিসাবের সূত্র ও গাইড</string>
+    <string name="guide_round_title">১. গোল গাছ / গোল কাঠের সিএফটি</string>
+    <string name="guide_round_formula">(বেড় ইঞ্চি × বেড় ইঞ্চি × দৈর্ঘ্য ফুট) ÷ ২৩০৪</string>
+    <string name="guide_round_alt">অথবা: (বেড় ফুট × বেড় ফুট × দৈর্ঘ্য ফুট) ÷ ১৬</string>
+    <string name="guide_round_desc">গাছের মাঝখানের অংশের চারদিকের মাপকে বেড় (গোলাই) বলে। যদি গোড়া ও আগা অসমান হয়, তবে মাঝামাঝি বেড় অথবা গোড়া, মাঝ ও আগার গড় বেড় নিন।</string>
+    <string name="guide_round_example">উদাহরণ: বেড় ৪৮ ইঞ্চি (৪ ফুট) এবং দৈর্ঘ্য ১০ ফুট হলে সিএফটি = (৪৮ × ৪৮ × ১০) ÷ ২৩০৪ = ১০.০০ সিএফটি।</string>
+
+    <string name="guide_sawn_title">২. কাটা / চেরাই কাঠের সিএফটি</string>
+    <string name="guide_sawn_formula">(দৈর্ঘ্য ফুট × প্রস্থ ইঞ্চি × পুরুত্ব ইঞ্চি) ÷ ১৪৪</string>
+    <string name="guide_sawn_alt">অথবা: দৈর্ঘ্য (ফুট) × প্রস্থ (ফুট) × পুরুত্ব (ফুট)</string>
+    <string name="guide_sawn_desc">চেরাই কাঠ বা তক্তার দৈর্ঘ্য ফুট-ইঞ্চিতে এবং প্রস্থ ও পুরুত্ব ইঞ্চিতে মাপা হয়। ইঞ্চিকে ১২ দিয়ে ভাগ করে ফুটে রূপান্তর করা হয়।</string>
+    <string name="guide_sawn_example">উদাহরণ: দৈর্ঘ্য ৮ ফুট, প্রস্থ ৬ ইঞ্চি ও পুরুত্ব ৩ ইঞ্চি হলে সিএফটি = (৮ × ৬ × ৩) ÷ ১৪৪ = ১.০০ সিএফটি।</string>
+
+    <string name="guide_suta_title">৩. সুতা থেকে ইঞ্চি রূপান্তর চার্ট</string>
+    <string name="guide_suta_desc">কাঠের মাপে ১ ইঞ্চি = ৮ সুতা। পুরুত্ব বা প্রস্থে সুতা থাকলে নিচের দশমিক মান ব্যবহার করুন:</string>
+
+    <string name="guide_unit_title">৪. প্রয়োজনীয় একক রূপান্তর</string>
+    <string name="guide_unit_ft_in">১ ফুট = ১২ ইঞ্চি</string>
+    <string name="guide_unit_cft_cbm">১ সিএফটি (CFT) = ০.০২৮৩২ ঘনমিটার (m³)</string>
+    <string name="guide_unit_cbm_cft">১ ঘনমিটার (m³) = ৩৫.৩১৪৭ সিএফটি (CFT)</string>
+
+    <!-- Wood presets -->
+    <string name="wood_shegun">সেগুন</string>
+    <string name="wood_mehogoni">মেহগনি</string>
+    <string name="wood_kathal">কাঁঠাল</string>
+    <string name="wood_aam">আম</string>
+    <string name="wood_koroi">কড়ই</string>
+    <string name="wood_akashmoni">আকাশমণি</string>
+</resources>

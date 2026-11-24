@@ -1,0 +1,6 @@
+{
+  "name": "কাঠ হিসাব",
+  "description": "কাটা কাঠ ও গোল গাছের ফুট ও ইঞ্চির মাপ থেকে স্বয়ংক্রিয়ভাবে সিএফটি (CFT) ও দাম নির্ণয়ের সহজ ও হালকা ক্যালকুলেটর অ্যাপ।",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
